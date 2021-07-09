@@ -11,33 +11,23 @@
             "role": "lead"
         }
     ],
-    "version": "2.6.5",
+    "version": "103",
     "time": "2017-11-11",
-    "repositories": [
-        {
-            "type": "pear",
-            "url": "https://pear.horde.org"
-        }
-    ],
     "require": {
-        "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Exception": "^2",
-        "pear-pear.horde.org/Horde_Idna": "^1",
-        "pear-pear.horde.org/Horde_Mime": "^2",
-        "pear-pear.horde.org/Horde_Stream_Filter": "^2",
-        "pear-pear.horde.org/Horde_Translation": "^2.2",
-        "pear-pear.horde.org/Horde_Util": "^2"
+        "php": ">=7.3",
+        "horde/exception": "103",
+        "horde/idna": "103",
+        "horde/mime": "103",
+        "horde/stream-filter": "103",
+        "horde/translation": "103",
+        "horde/util": "103"
     },
     "suggest": {
-        "pear-pear.horde.org/Horde_Smtp": "^1.7",
-        "pear-pear.horde.org/Horde_Stream_Wrapper": "^2.1",
-        "pear-pear.horde.org/Horde_Test": "^2.1",
         "pear-pear.php.net/Net_DNS2": "*",
-        "pear-pear.php.net/Net_SMTP": "^1.6"
-    },
-    "replace": {
-        "pear-pear.horde.org/Horde_Mail": "2.*",
-        "pear-horde/Horde_Mail": "2.*"
+        "pear-pear.php.net/Net_SMTP": "^1.6",
+        "horde/smtp": "^1.7",
+        "horde/stream-wrapper": "^2.1",
+        "horde/test": "^2.1"
     },
     "autoload": {
         "psr-0": {
