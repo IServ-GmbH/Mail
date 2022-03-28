@@ -140,7 +140,7 @@ implements ArrayAccess, Countable, Iterator
 
     /**
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if (!isset($this->_parsed[$offset])) {
             return null;
@@ -218,7 +218,7 @@ implements ArrayAccess, Countable, Iterator
 
     /* Iterator methods. */
 
-    public function current()
+    public function current(): mixed
     {
         $key = $this->key();
 
@@ -227,7 +227,7 @@ implements ArrayAccess, Countable, Iterator
             : $this[$key];
     }
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->_parsed);
     }

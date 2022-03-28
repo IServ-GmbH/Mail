@@ -338,7 +338,7 @@ class Horde_Mail_Rfc822_List
 
     /**
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         try {
             $this->seek($offset);
@@ -394,7 +394,7 @@ class Horde_Mail_Rfc822_List
 
     /* Iterator methods. */
 
-    public function current()
+    public function current(): mixed
     {
         if (!$this->valid()) {
             return null;
@@ -407,7 +407,7 @@ class Horde_Mail_Rfc822_List
             : $ob->addresses[$this->_ptr['subidx']];
     }
 
-    public function key()
+    public function key(): mixed
     {
         return $this->_ptr['key'];
     }
