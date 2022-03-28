@@ -133,7 +133,7 @@ implements ArrayAccess, Countable, Iterator
 
     /**
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->_parsed[$offset]);
     }
@@ -179,14 +179,14 @@ implements ArrayAccess, Countable, Iterator
 
     /**
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         // NOOP
     }
 
     /**
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         // NOOP
     }
@@ -198,7 +198,7 @@ implements ArrayAccess, Countable, Iterator
      *
      * @return integer  The number of messages.
      */
-    public function count()
+    public function count(): int
     {
         return count($this->_parsed);
     }
@@ -232,19 +232,19 @@ implements ArrayAccess, Countable, Iterator
         return key($this->_parsed);
     }
 
-    public function next()
+    public function next(): void
     {
         if ($this->valid()) {
             next($this->_parsed);
         }
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->_parsed);
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return !is_null($this->key());
     }

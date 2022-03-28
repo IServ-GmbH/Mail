@@ -331,7 +331,7 @@ class Horde_Mail_Rfc822_List
 
     /**
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return !is_null($this[$offset]);
     }
@@ -350,7 +350,7 @@ class Horde_Mail_Rfc822_List
 
     /**
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if ($ob = $this[$offset]) {
             if (is_null($this->_ptr['subidx'])) {
@@ -367,7 +367,7 @@ class Horde_Mail_Rfc822_List
 
     /**
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         if ($ob = $this[$offset]) {
             if (is_null($this->_ptr['subidx'])) {
@@ -387,7 +387,7 @@ class Horde_Mail_Rfc822_List
      *
      * @return integer  The number of addresses.
      */
-    public function count()
+    public function count(): int
     {
         return count($this->addresses);
     }
@@ -412,7 +412,7 @@ class Horde_Mail_Rfc822_List
         return $this->_ptr['key'];
     }
 
-    public function next()
+    public function next(): void
     {
         if (is_null($this->_ptr['subidx'])) {
             $curr = $this->current();
@@ -437,7 +437,7 @@ class Horde_Mail_Rfc822_List
         }
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         $this->_ptr = array(
             'idx' => 0,
@@ -453,12 +453,12 @@ class Horde_Mail_Rfc822_List
         }
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return (!empty($this->_ptr) && isset($this->_data[$this->_ptr['idx']]));
     }
 
-    public function seek($position)
+    public function seek($position): void
     {
         if (!$this->valid() ||
             ($position < $this->_ptr['key'])) {

@@ -11,16 +11,14 @@
             "role": "lead"
         }
     ],
-    "version": "103",
-    "time": "2017-11-11",
     "require": {
         "php": ">=7.3",
-        "horde/exception": "103",
-        "horde/idna": "103",
-        "horde/mime": "103",
-        "horde/stream-filter": "103",
-        "horde/translation": "103",
-        "horde/util": "103"
+        "horde/exception": ">=106",
+        "horde/idna": ">=106",
+        "horde/mime": ">=106",
+        "horde/stream-filter": ">=106",
+        "horde/translation": ">=106",
+        "horde/util": ">=106"
     },
     "suggest": {
         "pear-pear.php.net/Net_DNS2": "*",
