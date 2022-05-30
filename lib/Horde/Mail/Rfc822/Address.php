@@ -94,12 +94,12 @@ class Horde_Mail_Rfc822_Address extends Horde_Mail_Rfc822_Object
         case 'host':
             try {
                 $value = Horde_Idna::decode($value);
-            } catch (Horde_Idna_Exception $e) {}
+            } catch (Horde_Idna_Exception) {}
             $this->_host = Horde_String::lower($value);
             break;
 
         case 'personal':
-            $this->_personal = strlen($value)
+            $this->_personal = (null !== $value && '' !== $value)
                 ? Horde_Mime::decode($value)
                 : null;
             break;
